@@ -1,0 +1,98 @@
+:root {
+  --background-win95: #008080;
+  --window-border: #c0c0c0;
+  --window-header: #000080;
+  --button-face: #c0c0c0;
+  --button-shadow: #808080;
+  --button-highlight: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'MS Sans Serif', Arial, sans-serif;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  height: 100vh;
+  background-color: var(--background-win95);
+}
+
+.desktop {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.window {
+  width: 600px;
+  background-color: var(--window-border);
+  border: 3px solid var(--window-border);
+  box-shadow: inset -1px -1px 0 var(--button-shadow), inset 1px 1px 0 var(--button-highlight);
+}
+
+.window-header {
+  background-color: var(--window-header);
+  color: white;
+  padding: 3px 5px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.window-title {
+  font-size: 1rem;
+}
+
+.window-content {
+  background-color: var(--window-border);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.display-area {
+  background-color: black;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: monospace;
+  font-size: 3rem;
+  padding: 20px;
+  text-align: center;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.win95-button {
+  background-color: var(--button-face);
+  border: 2px solid var(--button-highlight);
+  border-right-color: var(--button-shadow);
+  border-bottom-color: var(--button-shadow);
+  padding: 5px 20px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  min-width: 100px;
+  box-shadow: inset -1px -1px 0 black, inset 1px 1px 0 white;
+}
+
+.win95-button:active {
+  border: 2px solid var(--button-shadow);
+  border-right-color: var(--button-highlight);
+  border-bottom-color: var(--button-highlight);
+  box-shadow: inset 1px 1px 0 black, inset -1px -1px 0 white;
+}
